@@ -1,12 +1,13 @@
 // src/utils/instrumentCharacterMap.js
 
 const instrumentCharacterMap = {
-    drums: 'solanum',
-    whistling: 'feldspath',
-    piano: 'gabbro',
-    harmonica: 'riebeck',
-    flute: 'esker',
-    banjo: 'chail',
+
+    drums: 'chail',
+    whistling: 'esker',
+    piano: 'solanum',
+    harmonica: 'feldspath',
+    flute: 'gabbro',
+    banjo: 'riebeck',
   };
   
   export default instrumentCharacterMap;
