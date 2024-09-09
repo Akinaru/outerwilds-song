@@ -1,5 +1,3 @@
-/* src/scss/Character.scss */
-
 .character-container {
   display: flex;
   flex-wrap: wrap; /* Permet aux éléments de passer à la ligne suivante */
@@ -8,35 +6,25 @@
 }
 
 .character {
-  min-width: 200px; /* Largeur minimale pour chaque élément */
-  min-height: 200px; /* Hauteur minimale pour chaque élément */
-  max-width: 200px; /* Largeur maximale pour chaque élément */
-  max-height: 200px; /* Hauteur maximale pour chaque élément */
-  box-sizing: border-box; /* Inclut le padding et la bordure dans la largeur totale */
-  overflow: hidden;
-  position: relative;
-  border-radius: 8px; /* Bordures arrondies (optionnel) */
+  width: 200px; /* Largeur fixe pour chaque élément */
+  height: 200px; /* Hauteur fixe pour chaque élément */
+  border-radius: 8px; /* Bordures arrondies */
   border: 1px solid #ccc; /* Bordure autour des images (optionnel) */
-  display: flex; /* Centre le contenu (image) */
-  align-items: center; /* Centre l'image verticalement */
-  justify-content: center; /* Centre l'image horizontalement */
+  background-size: 100% 100%; /* Remplit complètement le conteneur, même si cela déforme l'image */
+  background-position: center; /* Centre l'image dans le conteneur */
+  background-repeat: no-repeat; /* Empêche la répétition de l'image */
+  cursor: pointer; /* Curseur de clic */
+  transition: transform 0.3s ease; /* Animation douce au clic ou hover */
 }
 
-.character img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Remplit le conteneur en conservant le ratio d'aspect */
-  object-position: center; /* Centre l'image dans le conteneur */
-  display: block; /* Supprime les marges internes de l'image */
-  /* Ajouté pour être certain que l'image couvre tout le conteneur */
-  min-width: 100%; /* Assure que l'image prend au moins toute la largeur du conteneur */
-  min-height: 100%; /* Assure que l'image prend au moins toute la hauteur du conteneur */
+.character.active {
+  transform: scale(1.05); /* Zoom léger lorsque l'instrument est actif */
 }
 
-.character.inactive img {
-  filter: grayscale(100%); /* Applique le filtre noir et blanc */
+.character.inactive {
+  filter: grayscale(100%); /* Applique un filtre noir et blanc */
 }
 
-.character.active img {
-  filter: none; /* Pas de filtre pour les images actives */
+.character:hover {
+  transform: scale(1.1); /* Zoom au survol */
 }
