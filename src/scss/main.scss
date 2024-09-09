@@ -22,9 +22,9 @@
   }
 
   #audioControls{
-    background-color: flex;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+      display: flex;
+      flex-wrap: wrap; /* Permet aux éléments de passer à la ligne suivante */
+      gap: 10px; /* Espace entre les éléments */
+      justify-content: center; /* Centre les éléments horizontalement */
   }
   

@@ -71,10 +71,10 @@ function App() {
 
   return (
     <div>
-      <h1>Control the Outer Wilds Instruments</h1>
+      <h1>OuterWilds - Travelers</h1>
 
       {!isPlaying ? (
-        <button className="play-button" onClick={handlePlay}>Play Music</button>
+        <button className="play-button" onClick={handlePlay}>Jouer la musique</button>
       ) : (
         <div>
           <GlobalVolumeControl globalVolume={globalVolume} onVolumeChange={handleGlobalVolumeChange} />

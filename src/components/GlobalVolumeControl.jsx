@@ -3,7 +3,7 @@ import React from 'react';
 const GlobalVolumeControl = ({ globalVolume, onVolumeChange }) => {
   return (
     <div className="control">
-      <label htmlFor="globalVolume">Global Volume:</label>
+      <label htmlFor="globalVolume">Volume de la musique:</label>
       <input
         id="globalVolume"
         type="range"
